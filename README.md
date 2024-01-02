@@ -1,2 +1,2 @@
 # WebGL Lab 1
-![plot](src\lab1.gif)
+![plot](lab1.gif)
