@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-    <title>PA#2</title>
+    <title>PA#3</title>
     <style>
         body {
             background-color: #EEEEEE;
@@ -35,14 +35,14 @@
 
     <div>
         <p>Set light position</p>
-        <label for="x">X</label>
-        <input type="range" name="x" id="x" min="-2" max="2" step="0.1" value="1" onchange="draw()">
-        <label for="y">Y</label>
-        <input type="range" name="y" id="y" min="-2" max="2" step="0.1" value="1" onchange="draw()">
+        <label for="x" hidden>X</label>
+        <input type="range" name="x" id="x" min="-2" max="2" step="0.1" value="1" onchange="draw()" hidden>
+        <label for="y" hidden>Y</label>
+        <input type="range" name="y" id="y" min="-2" max="2" step="0.1" value="1" onchange="draw()" hidden>
         <label for="z">Z</label>
         <input type="range" name="z" id="z" min="-2" max="2" step="0.1" value="1" onchange="draw()">
     </div>
-    <div>
+    <div hidden>
         <p>Set light direction</p>
         <label for="dx">X</label>
         <input type="range" name="dx" id="dx" min="-2" max="1" step="0.1" value="-1" onchange="draw()">

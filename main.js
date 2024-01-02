@@ -113,13 +113,17 @@ function draw() {
     let x = parseFloat(document.getElementById('x').value)
     let y = parseFloat(document.getElementById('y').value)
     let z = parseFloat(document.getElementById('z').value)
-    gl.uniform3fv(shProgram.iLightDir, [dx,dy,dz]);
-    gl.uniform3fv(shProgram.iLightPos, [x, y, z]);
-    line.BufferData([x+dx,y+dy,z+dz,x,y,z])
+    x = cos(Date.now()*0.001);
+    y= sin(Date.now()*0.001)
+    gl.uniform3fv(shProgram.iLightDir, [-x,-y,-z]);
+    
+    gl.uniform3fv(shProgram.iLightPos, [x,y, z]);
+   
+    line.BufferData([0,0,0,x,y,z])
     gl.uniform4fv(shProgram.iColor, [1, 1, 1, 1]);
     line.DrawLine();
    
-    modelViewProjection = m4.multiply(modelViewProjection, m4.translation(x, y, z))
+    modelViewProjection = m4.multiply(modelViewProjection, m4.translation(x,y, z))
     gl.uniformMatrix4fv(shProgram.iModelViewProjectionMatrix, false, modelViewProjection);
     
     sphere.Draw();
