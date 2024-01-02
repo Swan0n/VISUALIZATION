@@ -1,2 +1,3 @@
-# WebGL Lab 1
-![plot](lab1.gif)
+# WebGL
+
+![plot](lab2.gif)

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-    <title>PA#1</title>
+    <title>PA#2</title>
     <style>
         body {
             background-color: #EEEEEE;
@@ -30,6 +30,27 @@
     <input type="range" name="num" id="num" min="10" max="100" step="1" value="10" onchange="update()">
     <label for="low">Set lower limit</label>
     <input type="range" name="low" id="low" min="0" max="2" step="0.1" value="1" onchange="update()">
+    <label for="limit">Set light range</label>
+    <input type="range" name="limit" id="limit" min="-2" max="2" step="0.1" value="0.1" onchange="draw()">
+
+    <div>
+        <p>Set light position</p>
+        <label for="x">X</label>
+        <input type="range" name="x" id="x" min="-2" max="2" step="0.1" value="1" onchange="draw()">
+        <label for="y">Y</label>
+        <input type="range" name="y" id="y" min="-2" max="2" step="0.1" value="1" onchange="draw()">
+        <label for="z">Z</label>
+        <input type="range" name="z" id="z" min="-2" max="2" step="0.1" value="1" onchange="draw()">
+    </div>
+    <div>
+        <p>Set light direction</p>
+        <label for="dx">X</label>
+        <input type="range" name="dx" id="dx" min="-2" max="1" step="0.1" value="-1" onchange="draw()">
+        <label for="dy">Y</label>
+        <input type="range" name="dy" id="dy" min="-2" max="1" step="0.1" value="-1" onchange="draw()">
+        <label for="dz">Z</label>
+        <input type="range" name="dz" id="dz" min="-2" max="1" step="0.1" value="-1" onchange="draw()">
+    </div>
 
     <div id="canvas-holder">
         <canvas width="600" height="600" id="webglcanvas" style="background-color:red"></canvas>
